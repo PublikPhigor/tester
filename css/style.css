@@ -1,0 +1,213 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+    a:hover {
+        color: initial !important;
+    }
+
+/* header */
+header {
+    height: 8vh;
+    background: #fff;
+    padding: 0 6%;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 1px 4px 1px #f4f4f4;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+}
+
+#logo h2 {
+    color: #1a1aff;
+    padding: 0;
+    margin: 0;
+    line-height: 8vh;
+}
+
+nav {
+    width: 50%;
+}
+
+nav li {
+    display: inline;
+    line-height: 8vh;
+}
+    nav li:not(:last-child) {
+        margin-right: 30px;
+    }
+    nav a {
+        text-decoration: none;
+        color: #000;
+        font-size: .9rem;
+    }
+    .join-us {
+        border: 1px solid #0080ff;
+        color: #0080ff;
+        padding: 10px 30px;
+        border-radius: 5px;
+    }
+
+
+/* landing page */
+.landing-page {
+    margin-top: 8vh;
+    height: 400px;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #000066, #0080ff);
+    color: #fff;
+}
+
+.landing-page img {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0 ;
+}
+    .btn-landing {
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #0080ff;
+    }
+
+.skill-cont {
+    padding-top: 100px;
+}
+    .margin-auto {
+        margin: 0 auto;
+    }
+    .section-title {
+        font-weight: 600;
+    }
+/* how tester works */
+.desc-section {
+    padding: 10px;
+}
+    .desc {
+        align-items: center;
+    }
+        .desc img {
+            width: 100%;
+            position: relative;
+        }
+            .desc img::before {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                content: "";
+                border: 2px solid #0080ff;
+                border-radius: 5px;
+                top: 10%;
+                left: 10%;
+            }
+        .number {
+            text-align: center;
+            background-color: #0080ff;
+            width: 30px;
+            height: 30px;
+            color: #fff;
+            border-radius: 50%;
+            margin: 5px 0;
+        }
+            .number span {
+                line-height: 30px;
+                font-size: 1.2rem;
+            }
+        .desc-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .small-text {
+            font-size: .9rem;
+            font-weight: 600;
+        }
+/* cta */
+.line {
+    border-top: 1px solid #0080ff;
+}
+
+.cta {
+    color: #fff;
+    height: 400px;
+    padding: 100px 0;
+    background-image: linear-gradient(to bottom, #000066, #0080ff);
+    position: relative;
+}
+    .btn-ready {
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #0080ff;
+        border-radius: 5px;
+    }
+    .cta img {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        top: 50px
+    }
+    .cta-img-1 {
+        left: 0;
+    }
+    .cta-img-2 {
+        right: 0;
+    }
+    .light-sm-text {
+        font-weight: 400;
+        font-size: .9rem;
+    }
+    .join-tester .fa.fa-comment {
+        font-size: 3rem;
+        margin: 0;
+    }
+    .join-tester p {
+        margin: 0;
+    }
+
+/* footer */
+footer {
+    border-bottom: 20px solid #0080ff;
+}
+    .footer-text {
+        font-size: .9rem;
+        display: block;
+        padding: 0;
+        font-weight: 700;
+        color: #0080ff;
+    }
+    .social .fa {
+        margin-right: 10px;
+    }
+    .footer-form input {
+        border: 1px solid #0080ff;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .footer-form input[type=submit]{
+        border: none;
+        padding: 5px 20px;
+        background-color: #0080ff;
+        color: #fff;
+        margin-left: 5px;
+    }
+    .btn:hover {
+        background-color: #000066 !important;
+        color: #fff !important;
+    }
