@@ -6,6 +6,7 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    overflow-anchor: auto;
 }
 
 ul {
@@ -196,7 +197,6 @@ nav li {
     bottom: 0;
     left: 0 ;
     z-index: 9;
-    mix-blend-mode: multiply;
 }
     .landing-page a, .landing-page p, .landing-page h1 {
         position: relative;
@@ -264,16 +264,17 @@ nav li {
         }
 @media screen and (max-width:1024px) {
     .landing-page {
-        padding: 50px 20px;
+        padding: 100px 20px;
     }
     .landing-page h1 {
         font-size: 1.5rem;
     }
     .landing-page p {
-        font-size: .9rem;
+        display: none;
     }
     .landing-page img {
         height: 80%;
+        width: 50%;
     }
     .desc {
         flex-direction: column;
@@ -343,6 +344,9 @@ nav li {
     }
 
 /* ==== BLOG ==== */
+.blog-cont {
+    overflow-anchor: auto;
+}
 .blog-card {
     height: 350px;
     overflow: hidden;
@@ -464,6 +468,21 @@ nav li {
                 text-transform: uppercase;
                 color: #000066;
             }
+            .view-more-btn {
+                font-size: 3rem;
+                color: #000066;
+                cursor: pointer;
+                position: relative;
+            }
+            .extra-posts {
+                position: relative;
+                transform: scaleY(0);
+                height: 0;
+            }
+            .extra-posts.active {
+                height: auto;
+                transform: scaleY(1);
+            }
 @media screen and (max-width:1024px) {
     .blog-card {
         height: auto;
@@ -475,7 +494,60 @@ nav li {
     .cta img {
         display: none;
     }
+    .join-tester {
+        display: none;
+    }
 }
+
+/* about */
+.team-card {
+    padding: 20px;
+    height: 350px;
+    margin-bottom: 30px;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+    .tc-img img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: relative;
+    }
+    .ts-links {
+        position: relative;
+        transition: 1s;
+    }
+        .tc-img img:hover .ts-links {
+            transform: translateY(-200%);
+            visibility: visible;
+            transition: 1s;
+        }
+    
+    .ts-links a {
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+    .ts-links .fa {
+        margin-right: 10px;
+        color: #000066;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        line-height: 30px;
+    }
+    .t-name {
+        font-weight: 600;
+        color: #000066;
+    }
+    .t-post {
+        color: #999;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
 
 /* footer */
 footer {
