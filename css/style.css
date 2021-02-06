@@ -24,26 +24,30 @@ a {
 
 /* header */
 header {
-    height: 8vh;
-    background: #fff;
-    padding:10px 6%;
+    height: 100px;
+    background: transparent;
+    padding: 0 6%;
     align-items: center;
     box-sizing: border-box;
     overflow: hidden;
-    box-shadow: 1px 4px 1px #f4f4f4;
     position: fixed;
     width: 100%;
     z-index: 999;
     top: 0;
     display: flex;
 }
+    header.fixed {
+        background-color: #fff;
+        box-shadow:  0px 5px 5px #ccc;
+    }
     #logo {
         width: 20%;
-        background-color: rgba(0,0,0);
-        /* background-image: linear-gradient(to bottom, #000066, #0080ff); */
+        height: 100%;
+        overflow: hidden;
     }
     #logo img {
-        width: 100%;
+        width: 80px;
+        height: 80px;
     }
     nav {
         width: 80%;
@@ -68,10 +72,8 @@ header {
         left: 50%;
         transform: translateX(-50%);
         line-height: 10vh;
-        width: 50%;
-        background-image: linear-gradient(to bottom, #000066, #0080ff);
-        /* background-color: #000; */
-        height: 10vh;
+        width: 80px;
+        height: 80px;
     }
         .mobile-logo img {
             width: 100%;
@@ -109,12 +111,12 @@ header {
     z-index: 999;
     padding: 150px 0 0;
     left: 0;
-    transform: translateX(-100%);
-    transition: transform 0.4s ease;
+    transform: translateY(-100%);
+    transition: transform 1s ease;
 }
     .mobile-navbar.active {
-        transform: translateX(0);
-        transition: transform 0.4s ease;
+        transform: translateY(0);
+        transition: transform 1s ease;
     }
     .mobile-navbar ul {
         padding: 0;
@@ -144,29 +146,32 @@ header {
             transform: translateX(0);
         }
 
-#logo h2 {
-    color: #1a1aff;
-    padding: 0;
-    margin: 0;
-    line-height: 8vh;
-}
 
 nav {
     width: 50%;
+    height: 100%;
+    line-height: 100%;
 }
-
+nav ul {
+    line-height: 100px;
+}
 nav li {
     display: inline;
-    line-height: 8vh;
+    line-height: 100px;
+    padding: 10px 0;
 }
     nav li:not(:last-child) {
         margin-right: 30px;
     }
     nav a {
         text-decoration: none;
-        color: #000;
+        color: #fff;
         font-size: .9rem;
+        font-weight: 600;
     }
+        nav a.fixed {
+            color: #000066 !important;
+        }
         nav a:hover {
             color: #000066 !important;
         }
@@ -176,9 +181,12 @@ nav li {
         padding: 5px 30px;
         border-radius: 5px;
     }
+        .join-us:hover {
+            border: none;
+        }
 
     .current {
-        border-bottom: 2px solid #000066;
+        border-top: 3px solid #fff;
     }
 @media screen and (max-width:1024px) {
     header {
@@ -196,18 +204,45 @@ nav li {
     margin-top: 8vh;
     height: 400px;
     text-align: center;
-    padding: 100px 0;
     position: relative;
+    top: -8vh;
     box-sizing: border-box;
     overflow: hidden;
-    background-image: linear-gradient(to bottom, #000066, #0080ff);
     color: #fff;
-    background-attachment: fixed;
     transition: 1s;
 }
-    .lp-o {
-        padding: 150px 0;
+    .slider {
+        height: 100%;
+        width: 400%;
+        display: flex;
     }
+        .slide {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            position: relative;
+        }
+        .slide-o {
+            padding: 150px 0;
+        }
+            .slide::after {
+                position: absolute;
+                background-color: rgba(0,0,0,.2);
+                width: 100%;
+                height: 100%;
+                z-index: 9;
+                top: 0;
+                left: 0;
+                content: "";
+            }
+        .slide-1 {
+            background-image: url('/img/slide1.jpeg');
+        }
+        .slide-2 {
+            background-image: url('/img/slide2.jpeg');
+        }
 
 .landing-page img {
     height: 85%;
@@ -283,17 +318,16 @@ nav li {
         }
 @media screen and (max-width:1024px) {
     .landing-page {
-        padding: 100px 20px;
+        top: 0;
     }
-    .landing-page h1 {
+    .slide {
+        padding: 120px 20px;
+    }
+    .slide h1 {
         font-size: 1.5rem;
     }
     .landing-page p {
         display: none;
-    }
-    .landing-page img {
-        height: 80%;
-        width: 50%;
     }
     .desc {
         flex-direction: column;
